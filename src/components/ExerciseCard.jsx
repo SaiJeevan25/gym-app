@@ -12,7 +12,7 @@ export default function ExcersieCard(props) {
   return (
     <div className='p-4 rounded-md flex flex-col gap-4 bg-slate-800 sm:flex-wrap'>
       <div className='flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-x-4'>
-        <h4 className='text-3xl hidden sm:inline sm:text-4xl md:text-5xl font-semibold text-red-900'>
+        <h4 className='text-3xl sm:inline sm:text-4xl md:text-5xl font-semibold text-red-900'>
           0{index+1}
         </h4>
         <h2 className='capitalize whitespace-nowrap truncate max-w-full text-lg md:text-2xl flex-1 md:text-center'>{exercise.name.replaceAll("_", " ")}</h2>
