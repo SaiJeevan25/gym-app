@@ -16,9 +16,7 @@ export default function App() {
   function updateWorkout() {
     if (muscles.length < 1) return
     let newWorkout = generateWorkout({poison, muscles, goal})
-    console.log(newWorkout)
     setWorkout(newWorkout)
-    window.location.href = '#workout'
   }
 
   function updateGenerator() {
@@ -40,7 +38,7 @@ export default function App() {
       setGoal = {setGoal}
       updateWorkout = {updateWorkout}
       />)  }
-      {workout && (<Workout workout = {workout}/>)}
+      {showGenerator && workout && (<Workout workout = {workout}/>)}
     </main>
   )
 }

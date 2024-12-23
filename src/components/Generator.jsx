@@ -113,7 +113,10 @@ export default function Generator(props) {
           )
         })}
       </div>
-      <Button func={updateWorkout} text='Formulate' />
+      <Button func={() => {
+        updateWorkout()
+        setTimeout(() => {window.location.href = '#workout'}, 50)
+      }} text='Formulate' />
     </SectionWrapper>
           
   

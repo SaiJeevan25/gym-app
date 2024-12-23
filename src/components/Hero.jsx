@@ -14,7 +14,7 @@ export default function Hero(props) {
       <Button func={() => {
         updateGenerator();
         setTimeout(() => {
-          document.getElementById('generate')?.scrollIntoView({ behavior: 'smooth' });
+          window.location.href = "#generate";
         }, 50);
       }}
        text={text} />
