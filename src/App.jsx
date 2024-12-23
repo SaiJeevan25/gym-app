@@ -27,7 +27,8 @@ export default function App() {
   }
 
   return (
-    <main className="min-h-screen flex flex-col bg-gradient-to-r from-slate-800 to-slate-950 text-white text-sm sm:text-base">
+    <main className="min-h-screen flex flex-col bg-gradient-to-r from-slate-900 to-black
+ text-white text-sm sm:text-base">
       <Hero updateGenerator = {updateGenerator} text={text}/>
       {showGenerator && (<Generator 
       poison = {poison} 

@@ -11,15 +11,15 @@ span {
   font-weight: inherit;
 }
 
-.blueshadow{
-  box-shadow: 3px 3px 0 0 #60a5fa;
+.redShadow{
+  box-shadow: 3px 3px 0 0 #9b1c1c;
 }
-.blueshadow:hover {
+.redShadow:hover {
   transform: translate(-3px,-3px);
-  box-shadow: 6px 6px 0 0 #60a5fa;
+  box-shadow: 6px 6px 0 0 #9b1c1c;
 }
-.blueshadow:active {
+.redShadow:active {
   transform: translate(0px,0px);
-  box-shadow: 2px 2px 0 0 #60a5fa;
+  box-shadow: 2px 2px 0 0 #9b1c1c;
   border: solid 1px;
 }
