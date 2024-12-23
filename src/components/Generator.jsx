@@ -88,7 +88,7 @@ export default function Generator(props) {
                     key={muscleGroupIndex} 
                     className={'hover:text-blue-400 duration-150 ' + (muscle.includes(muscleGroup) ? ' text-blue-400' : " ")} 
                   >
-                    <p className='uppercase'>{muscleGroup.replace('_'," ")}</p>
+                    <p className='m-1 uppercase'>{muscleGroup.replace('_'," ")}</p>
                   </button>
                 )
             })}
