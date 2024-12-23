@@ -1,7 +1,8 @@
 import React from 'react'
 import Button from './Button'
 
-export default function Hero() {
+export default function Hero(props) {
+  const {updateGenerator, text} = props
   return (
     <div className='min-h-screen flex flex-col gap-10 items-center justify-center text-center max-w-[900px] w-full m-auto'>
       <div className="flex flex-col gap-4 ">      
@@ -10,9 +11,13 @@ export default function Hero() {
       </div>
       <p className='text-sm md:text-base font-light '>I hereby acknowledgement that I may become <span className='text-blue-400 font-medium '>unbelievably swlenormous</span> and accept all the risks of becoming the local <span className='text-blue-400 font-medium '>mass montrosity</span>, afflicted with severe body dismorphia, unable to fit through doors.
       </p>
-      <Button func={()=>{
-        window.location.href = '#generate'
-      }} text='Accept and Begin' />
+      <Button func={() => {
+        updateGenerator();
+        setTimeout(() => {
+          document.getElementById('generate')?.scrollIntoView({ behavior: 'smooth' });
+        }, 50);
+      }}
+       text={text} />
     </div>
   )
 }

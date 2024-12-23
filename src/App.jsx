@@ -6,7 +6,8 @@ import { useState } from'react'
 import { generateWorkout } from './utils/functions' 
 
 export default function App() {
-
+  const [text, setText] = useState('Accept and Begin')
+  const [showGenerator, setGenerator] = useState(false)
   const [poison, setPoison] = useState('individual')
   const [muscles, setMuscle] = useState([])
   const [goal, setGoal] = useState('strength_power')
@@ -20,10 +21,17 @@ export default function App() {
     window.location.href = '#workout'
   }
 
+  function updateGenerator() {
+    setGenerator(!showGenerator)
+    setTimeout(() => {
+      setText(showGenerator ? 'Accept and Begin': 'Deny')
+    }, 100)
+  }
+
   return (
     <main className="min-h-screen flex flex-col bg-gradient-to-r from-slate-800 to-slate-950 text-white text-sm sm:text-base">
-      <Hero />
-      <Generator 
+      <Hero updateGenerator = {updateGenerator} text={text}/>
+      {showGenerator && (<Generator 
       poison = {poison} 
       setPoison = {setPoison}
       muscle = {muscles}
@@ -31,7 +39,7 @@ export default function App() {
       goal = {goal}
       setGoal = {setGoal}
       updateWorkout = {updateWorkout}
-      />
+      />)  }
       {workout && (<Workout workout = {workout}/>)}
     </main>
   )
